@@ -68,7 +68,6 @@ export class CountriesService {
       const request = this.getCountryByAlphaCode(code);
       countriesRequest.push(request);
     })
-    
     //combineLatest() Combina múltiples Observables para crear un Observable cuyos valores se calculan a partir de los últimos valores de cada uno de sus Observables de entrada. En pocas palabras dispara simultaneamente los subscribes de la peticion.
     return combineLatest(countriesRequest);
 
